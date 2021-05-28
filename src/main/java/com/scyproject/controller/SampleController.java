@@ -2,6 +2,7 @@ package com.scyproject.controller;
 
 import com.scyproject.domain.User;
 import com.scyproject.redis.RedisService;
+import com.scyproject.redis.UserKey;
 import com.scyproject.result.CodeMsg;
 import com.scyproject.result.Result;
 import com.scyproject.service.UserService;
@@ -65,18 +66,34 @@ public class SampleController {
     }
 
 
+//    @RequestMapping("/redis/get")
+//    @ResponseBody
+//    public String getredis(){
+//        return redisService.get("ha",String.class);
+//    }
+//
+//    @RequestMapping("/redis/set")
+//    @ResponseBody
+//    public Result<Boolean> setredis(){
+//        Boolean res = redisService.set("ws","scy");
+//        return Result.success(res);
+//    }
+
     @RequestMapping("/redis/get")
     @ResponseBody
-    public String getredis(){
-        return redisService.get("ha",String.class);
+    public Result<User> redisGet() {
+        User  user  = redisService.get(UserKey.getById, ""+1, User.class);
+        return Result.success(user);
     }
 
     @RequestMapping("/redis/set")
     @ResponseBody
-    public Result<Boolean> setredis(){
-        Boolean res = redisService.set("ws","scy");
-        return Result.success(res);
+    public Result<Boolean> redisSet() {
+        User user  = new User();
+        user.setId(1);
+        user.setName("11111");
+        redisService.set(UserKey.getById, ""+1, user);//UserKey:id1
+        return Result.success(true);
     }
-
 
 }

@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="96fb1532-d8e6-4636-93a9-402e1c28b9e5" name="Default Changelist" comment="" />
+    <list default="true" id="96fb1532-d8e6-4636-93a9-402e1c28b9e5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/redis/BasePrefix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/redis/GoodsKey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/redis/KeyPrefix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/redis/UserKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/controller/SampleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/controller/SampleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/redis/RedisPoolFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/redis/RedisPoolFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/redis/RedisService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/redis/RedisService.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,12 +36,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/SeckillSystem" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -58,9 +70,17 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../秒杀系统文档/miaosha" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/scyproject/redis" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\java\com\scyproject\redis" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\java\com\scyproject\redis" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -155,7 +175,8 @@
       <workItem from="1622016916931" duration="4609000" />
       <workItem from="1622032668075" duration="7609000" />
       <workItem from="1622097831525" duration="1086000" />
-      <workItem from="1622099212596" duration="6839000" />
+      <workItem from="1622099212596" duration="12982000" />
+      <workItem from="1622176440780" duration="4252000" />
     </task>
     <servers />
   </component>
@@ -174,5 +195,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/scyproject/redis/RedisService.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

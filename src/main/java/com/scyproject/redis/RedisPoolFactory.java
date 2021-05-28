@@ -27,6 +27,5 @@ public class RedisPoolFactory {
                 0
         );
         return jedisPool;
-
     }
 }
