@@ -23,8 +23,8 @@ public class AppTest
     @Test
     public void hi()
     {
-        int i= 1;
-        double j = 1.2345;
-        System.out.println(( JSON.toJSONString(j) ).getClass() +"  "+JSON.toJSONString(j));
+        String i = "111";
+        System.out.println(String.format("222%s",i));
+//        System.out.println(( JSON.toJSONString(j) ).getClass() +"  "+JSON.toJSONString(j));
     }
 }

@@ -1,15 +1,15 @@
 package com.scyproject.validator;
-import  javax.validation.ConstraintValidator;
+
+import com.alibaba.druid.util.StringUtils;
+import com.scyproject.util.ValidatorUtil;
+
+import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
-
-import org.apache.commons.lang3.StringUtils;
-
-import com.imooc.miaosha.util.ValidatorUtil;
 
 public class IsMobileValidator implements ConstraintValidator<IsMobile, String> {
 
 	private boolean required = false;
-	
+
 	public void initialize(IsMobile constraintAnnotation) {
 		required = constraintAnnotation.required();
 	}

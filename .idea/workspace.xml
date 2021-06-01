@@ -2,53 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96fb1532-d8e6-4636-93a9-402e1c28b9e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/dao/MiaoshaUserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/domain/MiaoshaUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/service/MiaoshaUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/util/ValidatorUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap/css/bootstrap-theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap/css/bootstrap-theme.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap/css/bootstrap-theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap/css/bootstrap-theme.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap/js/npm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/goods_detail.htm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/bg2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iphone8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iphonex.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/meta10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/mi6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/jquery-validation/additional-methods.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/jquery-validation/jquery.validate.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/jquery-validation/localization/messages_zh.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/md5.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layer/layer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layer/mobile/layer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layer/mobile/need/layer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layer/skin/default/icon-ext.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layer/skin/default/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layer/skin/default/layer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layer/skin/default/loading-0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layer/skin/default/loading-1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layer/skin/default/loading-2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/order_detail.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/config/UserArgumentResolver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/config/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/controller/GoodsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/exception/GlobalException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/redis/MiaoshaUserKey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/util/UUIDUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/goods_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/result/CodeMsg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/result/CodeMsg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/dao/MiaoshaUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/dao/MiaoshaUserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/service/MiaoshaUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/service/MiaoshaUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/validator/IsMobile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/validator/IsMobile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/validator/IsMobileValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/validator/IsMobileValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/scyproject/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/scyproject/AppTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -112,18 +82,19 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\java\com\scyproject\service" />
-      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\java\com\scyproject\dao" />
-      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\java\com\scyproject\util" />
-      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\java\com\scyproject\result" />
-      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\java\com\scyproject\domain" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\java\com\scyproject\validator" />
       <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\java\com\scyproject\service" />
       <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\java\com\scyproject\controller" />
       <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\resources" />
       <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\java\com\scyproject\redis" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\java\com\scyproject\config" />
+      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\java\com\scyproject\controller" />
+      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\resources\templates" />
+      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\java\com\scyproject\redis" />
+      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\java\com\scyproject\util" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -210,8 +181,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.MainApplication (1)" />
-        <item itemvalue="Application.MD5Util" />
         <item itemvalue="JUnit.AppTest.hi" />
+        <item itemvalue="Application.MD5Util" />
         <item itemvalue="Spring Boot.MainApplication" />
         <item itemvalue="Application.App" />
       </list>
@@ -238,7 +209,12 @@
       <workItem from="1622190543091" duration="9875000" />
       <workItem from="1622267892327" duration="59000" />
       <workItem from="1622352463210" duration="12151000" />
-      <workItem from="1622442724084" duration="2102000" />
+      <workItem from="1622442724084" duration="2951000" />
+      <workItem from="1622452810572" duration="59000" />
+      <workItem from="1622455939944" duration="2275000" />
+      <workItem from="1622461604119" duration="2277000" />
+      <workItem from="1622464548565" duration="10094000" />
+      <workItem from="1622521016386" duration="4850000" />
     </task>
     <task id="LOCAL-00001" summary="封装redis">
       <created>1622180725400</created>
@@ -247,7 +223,21 @@
       <option name="project" value="LOCAL" />
       <updated>1622180725400</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="封装redis">
+      <created>1622444991615</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1622444991615</updated>
+    </task>
+    <task id="LOCAL-00003" summary="封装redis">
+      <created>1622445044032</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1622445044032</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,11 +269,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/scyproject/redis/RedisService.java</url>
           <line>29</line>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/scyproject/service/MiaoshaUserService.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/scyproject/util/MD5Util.java</url>
