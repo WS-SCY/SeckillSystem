@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="96fb1532-d8e6-4636-93a9-402e1c28b9e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/config/UserArgumentResolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/config/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/controller/GoodsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/exception/GlobalException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/redis/MiaoshaUserKey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/util/UUIDUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/goods_list.html" afterDir="false" />
+    <list default="true" id="96fb1532-d8e6-4636-93a9-402e1c28b9e5" name="Default Changelist" comment="分步式session">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/controller/MiaoshaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/dao/OrderDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/domain/Goods.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/domain/MiaoshaGoods.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/domain/MiaoshaOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/domain/OrderInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/service/GoodsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/service/MiaoshaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/service/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/vo/GoodsVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/xiaomi.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/goods_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/order_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/config/UserArgumentResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/config/UserArgumentResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/controller/GoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/controller/GoodsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/dao/MiaoshaUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/dao/MiaoshaUserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/exception/GlobalException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/exception/GlobalException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/service/MiaoshaUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/service/MiaoshaUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/validator/IsMobile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/validator/IsMobile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/validator/IsMobileValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/validator/IsMobileValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/scyproject/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/scyproject/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/util/ValidatorUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/util/ValidatorUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/goods_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/goods_list.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,24 +81,24 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/scyproject/validator" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/scyproject/controller" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\java\com\scyproject\validator" />
-      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\java\com\scyproject\service" />
-      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\java\com\scyproject\controller" />
-      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\resources" />
-      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\java\com\scyproject\redis" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\java\com\scyproject\config" />
       <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\java\com\scyproject\controller" />
       <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\resources\templates" />
-      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\java\com\scyproject\redis" />
-      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\java\com\scyproject\util" />
+      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\java\com\scyproject\dao" />
+      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\java\com\scyproject\service" />
+      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\java\com\scyproject\validator" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\resources\templates" />
+      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\java\com\scyproject\service" />
+      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\resources\static\img" />
+      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\java\com\scyproject\config" />
+      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\java\com\scyproject\controller" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -214,7 +218,7 @@
       <workItem from="1622455939944" duration="2275000" />
       <workItem from="1622461604119" duration="2277000" />
       <workItem from="1622464548565" duration="10094000" />
-      <workItem from="1622521016386" duration="4850000" />
+      <workItem from="1622521016386" duration="50373000" />
     </task>
     <task id="LOCAL-00001" summary="封装redis">
       <created>1622180725400</created>
@@ -237,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622445044032</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="分步式session">
+      <created>1622527435925</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1622527435925</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +271,8 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="封装redis" />
-    <option name="LAST_COMMIT_MESSAGE" value="封装redis" />
+    <MESSAGE value="分步式session" />
+    <option name="LAST_COMMIT_MESSAGE" value="分步式session" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

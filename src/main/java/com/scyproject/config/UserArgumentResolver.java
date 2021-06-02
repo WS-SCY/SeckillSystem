@@ -38,12 +38,13 @@ public class UserArgumentResolver implements HandlerMethodArgumentResolver {
 		if(StringUtils.isEmpty(cookieToken) && StringUtils.isEmpty(paramToken)){
 			return null;
 		}
-		String token = StringUtils.isEmpty(paramToken)?cookieToken:paramToken;
-		return userService.getByToken(response, token);
+		String token = StringUtils.isEmpty(paramToken)?cookieToken:paramToken; //优先paramToken
+		return userService.getByToken(response,token);
 	}
 
 	private String getCookieValue(HttpServletRequest request, String cookiTokenName) {
 		Cookie[] cookies = request.getCookies();
+		if(cookies != null)
 		for(Cookie cookie : cookies){
 			if(cookie.getName().equals(cookiTokenName)){
 				return cookie.getValue();

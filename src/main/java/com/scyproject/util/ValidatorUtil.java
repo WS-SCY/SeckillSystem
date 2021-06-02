@@ -16,9 +16,4 @@ public class ValidatorUtil {
 		Matcher m = mobile_pattern.matcher(src);
 		return m.matches();
 	}
-	
-//	public static void main(String[] args) {
-//			System.out.println(isMobile("18912341234"));
-//			System.out.println(isMobile("1891234123"));
-//	}
 }

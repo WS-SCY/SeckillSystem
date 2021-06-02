@@ -24,25 +24,25 @@ import org.thymeleaf.util.StringUtils;
 public class LoginController {
 
 	private static Logger log = LoggerFactory.getLogger(LoginController.class);
-	
+
 //	@Autowired
 //    UserService userService;
 
     @Autowired
-    MiaoshaUserService userService;
+    MiaoshaUserService miaoshaUserService;
 
 	@Autowired
     RedisService redisService;
-	
+
     @RequestMapping("/to_login")
     public String toLogin() {
         return "login";
     }
-    
+
     @RequestMapping("/do_login")
     @ResponseBody
     public Result<Boolean> doLogin(HttpServletResponse response,@Valid LoginVo loginVo) {
-        userService.login(response ,loginVo);
+        miaoshaUserService.login(response ,loginVo);
         return Result.success(true);
     }
 }
