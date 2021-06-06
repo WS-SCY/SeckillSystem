@@ -2,27 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96fb1532-d8e6-4636-93a9-402e1c28b9e5" name="Default Changelist" comment="分步式session">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/controller/MiaoshaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/dao/OrderDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/domain/Goods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/domain/MiaoshaGoods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/domain/MiaoshaOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/domain/OrderInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/service/GoodsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/service/MiaoshaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/service/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/vo/GoodsVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/xiaomi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/goods_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/order_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/config/UserArgumentResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/config/UserArgumentResolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/controller/GoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/controller/GoodsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/exception/GlobalException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/exception/GlobalException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/service/MiaoshaUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/service/MiaoshaUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/util/ValidatorUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/util/ValidatorUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/goods_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/goods_list.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -218,7 +198,10 @@
       <workItem from="1622455939944" duration="2275000" />
       <workItem from="1622461604119" duration="2277000" />
       <workItem from="1622464548565" duration="10094000" />
-      <workItem from="1622521016386" duration="50373000" />
+      <workItem from="1622521016386" duration="50606000" />
+      <workItem from="1622718077171" duration="23000" />
+      <workItem from="1622718132191" duration="1668000" />
+      <workItem from="1622772172147" duration="3777000" />
     </task>
     <task id="LOCAL-00001" summary="封装redis">
       <created>1622180725400</created>
