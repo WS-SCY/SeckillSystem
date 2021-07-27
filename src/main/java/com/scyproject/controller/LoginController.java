@@ -24,10 +24,6 @@ import org.thymeleaf.util.StringUtils;
 public class LoginController {
 
 	private static Logger log = LoggerFactory.getLogger(LoginController.class);
-
-//	@Autowired
-//    UserService userService;
-
     @Autowired
     MiaoshaUserService miaoshaUserService;
 

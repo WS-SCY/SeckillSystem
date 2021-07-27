@@ -1,15 +1,11 @@
 package com.scyproject.config;
-
 import com.scyproject.domain.MiaoshaUser;
 import com.scyproject.service.MiaoshaUserService;
-import com.scyproject.service.UserService;
-import jdk.nashorn.internal.parser.Token;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.MethodParameter;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.support.WebDataBinderFactory;
 import org.springframework.web.context.request.NativeWebRequest;
-import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.method.support.ModelAndViewContainer;
 import org.thymeleaf.util.StringUtils;

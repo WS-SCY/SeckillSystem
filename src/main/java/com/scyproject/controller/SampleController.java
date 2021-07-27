@@ -22,22 +22,6 @@ public class SampleController {
     @Autowired
     RedisService redisService;
 
-    //测试查询请求
-    @RequestMapping("/getbyid")
-    @ResponseBody
-    public Result<User> getbyid(@RequestParam(name = "id") int i){
-        User user = userService.getById(i);
-        return Result.success(user);
-    }
-
-    //测试事务
-    @RequestMapping("/transactionTest")
-    @ResponseBody
-    public Result<Boolean> mytransactionTest( ){
-        Boolean res = userService.transactionTest();
-        return Result.success(true);
-    }
-
 
 
     @GetMapping("/success")
