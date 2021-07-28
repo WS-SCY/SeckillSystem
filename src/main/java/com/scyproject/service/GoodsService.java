@@ -28,6 +28,5 @@ public class GoodsService {
 		goodsDao.reduceStock(g);
 	}
 
-	
-	
+
 }

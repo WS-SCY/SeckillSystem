@@ -40,4 +40,8 @@ public class OrderService {
         orderDao.insertMiaoshaOrder(miaoshaOrder);
         return orderInfo;
     }
+
+    public OrderInfo getOrderById(long orderId) {
+        return orderDao.getOrderById(orderId);
+    }
 }

@@ -4,9 +4,12 @@ package com.scyproject.controller;
 import com.scyproject.domain.MiaoshaUser;
 import com.scyproject.redis.GoodsKey;
 import com.scyproject.redis.RedisService;
+import com.scyproject.result.CodeMsg;
+import com.scyproject.result.Result;
 import com.scyproject.service.GoodsService;
 import com.scyproject.service.MiaoshaUserService;
 import com.scyproject.service.UserService;
+import com.scyproject.vo.GoodsDetailVo;
 import com.scyproject.vo.GoodsVo;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -63,48 +66,35 @@ public class GoodsController {
 		return html;
 	}
 
-
-	@RequestMapping(value="/to_detail/{goodsId}",produces="text/html")
+	@RequestMapping(value="/detail/{goodsId}")
 	@ResponseBody
-	public String detail(HttpServletRequest request, HttpServletResponse response, Model model,MiaoshaUser user,
-						 @PathVariable("goodsId")long goodsId) {
-		model.addAttribute("user", user);
-
-		//取缓存
-		String html = redisService.get(GoodsKey.getGoodsDetail, ""+goodsId, String.class);
-		if(!StringUtils.isEmpty(html)) {
-			return html;
+	public Result detail(MiaoshaUser user,
+										@PathVariable("goodsId")long goodsId) {
+		if(user == null){
+			return Result.error(CodeMsg.SESSION_ERROR);
 		}
-		//手动渲染
 		GoodsVo goods = goodsService.getGoodsVoById(goodsId);
-		model.addAttribute("goods", goods);
-
 		long startAt = goods.getStartDate().getTime();
 		long endAt = goods.getEndDate().getTime();
 		long now = System.currentTimeMillis();
-
 		int miaoshaStatus = 0;
 		int remainSeconds = 0;
 		if(now < startAt ) {//秒杀还没开始，倒计时
 			miaoshaStatus = 0;
 			remainSeconds = (int)((startAt - now )/1000);
-		}else  if(now > endAt){//秒杀已经结束
+		}else if(now > endAt){//秒杀已经结束
 			miaoshaStatus = 2;
 			remainSeconds = -1;
-		}else {//秒杀进行中
+		}else{//秒杀进行中
 			miaoshaStatus = 1;
 			remainSeconds = 0;
 		}
-		model.addAttribute("miaoshaStatus", miaoshaStatus);
-		model.addAttribute("remainSeconds", remainSeconds);
-
-		SpringWebContext ctx = new SpringWebContext(request,response,
-				request.getServletContext(),request.getLocale(), model.asMap(), applicationContext );
-		html = thymeleafViewResolver.getTemplateEngine().process("goods_detail", ctx);
-		if(!StringUtils.isEmpty(html)) {
-			redisService.set(GoodsKey.getGoodsDetail, ""+goodsId, html);
-		}
-		return html;
+		GoodsDetailVo vo = new GoodsDetailVo();
+		vo.setGoods(goods);
+		vo.setUser(user);
+		vo.setRemainSeconds(remainSeconds);
+		vo.setMiaoshaStatus(miaoshaStatus);
+		return Result.success(vo);
 	}
 
 }

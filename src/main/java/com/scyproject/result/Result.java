@@ -13,6 +13,10 @@ public class Result<T> {
     public static <T> Result<T>success(T data){
         return new Result<T>(data);
     }
+
+    public static <T> Result<T>success(int code ,String msg,T data){
+        return new Result(code,msg,data);
+    }
     /*
     * 失败时调用
     * */
