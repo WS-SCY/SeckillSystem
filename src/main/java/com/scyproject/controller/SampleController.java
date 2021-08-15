@@ -1,6 +1,9 @@
 package com.scyproject.controller;
 
+import com.scyproject.domain.MiaoshaUser;
 import com.scyproject.domain.User;
+import com.scyproject.rabbitmq.Message;
+import com.scyproject.rabbitmq.Sender;
 import com.scyproject.redis.RedisService;
 import com.scyproject.redis.UserKey;
 import com.scyproject.result.CodeMsg;
@@ -79,5 +82,6 @@ public class SampleController {
         redisService.set(UserKey.getById, ""+1, user);//UserKey:id1
         return Result.success(true);
     }
+
 
 }

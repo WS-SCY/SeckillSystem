@@ -4,6 +4,8 @@ package com.scyproject.controller;
 import com.scyproject.domain.MiaoshaOrder;
 import com.scyproject.domain.MiaoshaUser;
 import com.scyproject.domain.OrderInfo;
+import com.scyproject.rabbitmq.Message;
+import com.scyproject.rabbitmq.Sender;
 import com.scyproject.redis.GoodsKey;
 import com.scyproject.redis.RedisService;
 import com.scyproject.result.CodeMsg;
@@ -45,70 +47,54 @@ public class MiaoshaController  {
 	@Autowired
 	MiaoshaService miaoshaService;
 
-	@PostMapping("/do_miaosha")
+	/**
+	 * orderId：成功
+	 * -1：秒杀失败
+	 * 0： 排队中
+	 * */
+	@RequestMapping(value="/result", method=RequestMethod.GET)
 	@ResponseBody
-	public Result Seckill(Model model,MiaoshaUser user,@RequestParam("goodsId")long goodsId){
-		if(user == null){
+	public Result<Long> miaoshaResult(Model model,MiaoshaUser user,
+									  @RequestParam("goodsId")long goodsId) {
+		model.addAttribute("user", user);
+		if(user == null) {
 			return Result.error(CodeMsg.SESSION_ERROR);
 		}
-		GoodsVo goodsVo = goodsService.getGoodsVoById(goodsId);
-		int stock = goodsVo.getStockCount();
-		if(stock<=0){
+		long result  =miaoshaService.getMiaoshaResult(user.getId(), goodsId);
+		return Result.success(result);
+	}
+
+	public static HashMap<Long, Boolean> localOverMap =  new HashMap<Long, Boolean>();
+
+	@Autowired
+	Sender sender;
+
+	@RequestMapping(value="/do_miaosha", method=RequestMethod.POST)
+	@ResponseBody
+	public Result<Integer> miaosha(Model model,MiaoshaUser user,
+								   @RequestParam("goodsId")Long goodsId) {
+		if(user == null) {
+			return Result.error(CodeMsg.SESSION_ERROR);
+		}
+		//内存标记，减少redis访问
+		Boolean over = localOverMap.get(goodsId);
+		if(over!=null && over) {
 			return Result.error(CodeMsg.MIAO_SHA_OVER);
 		}
-		//判断是否秒杀到了
-		MiaoshaOrder order =  orderService.getOrderByUserAndGoods(user.getId(),goodsId);
-		if(order != null){
-			return Result.error(CodeMsg.MIAOSHA_FAIL);
+		//预减库存
+		long stock = redisService.decr(GoodsKey.getGoodsStock, ""+goodsId);//10
+		if(stock < 0) {
+			localOverMap.put(goodsId, true);
+			return Result.error(CodeMsg.MIAO_SHA_OVER);
 		}
-		//减库存 下订单 写入秒杀订单（事务）
-		OrderInfo orderInfo = miaoshaService.miaosha(user,goodsVo);
-		HashMap<String,Object> hashMap = new HashMap<>();
-		hashMap.put("goodsVo",goodsVo);
-		hashMap.put("order",order);
-		hashMap.put("orderInfo",orderInfo);
-		return Result.success(hashMap);
+		//判断是否已经秒杀到了
+		MiaoshaOrder order = orderService.getOrderByUserAndGoods(user.getId(), goodsId);
+		if(order != null) {
+			return Result.error(CodeMsg.REPEATE_MIAOSHA);
+		}
+		//入队
+		Message mm = new Message(user,goodsId);
+		sender.send(mm);
+		return Result.success(0);//排队中
 	}
-
-	@RequestMapping("/result")
-	@ResponseBody
-	public  Result Miaohsa(
-			MiaoshaUser user,
-			@RequestParam("goodsId")String goodsId
-	){
-		return Result.success(0,"success",1);
-	}
-
-//	@RequestMapping(value="/do_miaosha", method=RequestMethod.POST)
-//	@ResponseBody
-//	public Result<Integer> miaosha(Model model,MiaoshaUser user,
-//								   @RequestParam("goodsId")long goodsId) {
-//		if(user == null) {
-//			return Result.error(CodeMsg.SESSION_ERROR);
-//		}
-//		//内存标记，减少redis访问
-//		boolean over = localOverMap.get(goodsId);
-//		if(over) {
-//			return Result.error(CodeMsg.MIAO_SHA_OVER);
-//		}
-//		//预减库存
-//		long stock = redisService.decr(GoodsKey.getMiaoshaGoodsStock, ""+goodsId);//10
-//		if(stock < 0) {
-//			localOverMap.put(goodsId, true);
-//			return Result.error(CodeMsg.MIAO_SHA_OVER);
-//		}
-//		//判断是否已经秒杀到了
-//		MiaoshaOrder order = orderService.getMiaoshaOrderByUserIdGoodsId(user.getId(), goodsId);
-//		if(order != null) {
-//			return Result.error(CodeMsg.REPEATE_MIAOSHA);
-//		}
-//		//入队
-//		MiaoshaMessage mm = new MiaoshaMessage();
-//		mm.setUser(user);
-//		mm.setGoodsId(goodsId);
-//		sender.sendMiaoshaMessage(mm);
-//		return Result.success(0);//排队中
-//	}
-
-
 }

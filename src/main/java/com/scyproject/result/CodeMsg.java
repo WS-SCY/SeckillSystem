@@ -21,7 +21,7 @@ public class CodeMsg {
 	
 	
 	//商品模块 5003XX
-	
+	public static CodeMsg GOODS_LIST_EMPTY = new CodeMsg(500301, "商品列表为空");
 	
 	//订单模块 5004XX
 	public static CodeMsg ORDER_NOT_EXIST = new CodeMsg(500400, "订单不存在");
