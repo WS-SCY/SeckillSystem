@@ -28,6 +28,9 @@ public class OperatorController {
     @Autowired
     RedisService redisService;
 
+    /**
+     * 同步mysql到redis
+     * */
     @RequestMapping("/synchronization")
     @ResponseBody
     public Result operatorSynchronization(){

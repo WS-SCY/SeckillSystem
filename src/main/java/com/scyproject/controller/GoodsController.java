@@ -42,6 +42,10 @@ public class GoodsController {
 	@Autowired
 	ApplicationContext applicationContext;
 
+	/**
+	 * 跳转到list页面
+	 *
+	 * */
 	@RequestMapping(value="/to_list", produces="text/html")
 	@ResponseBody
 	public String list(HttpServletRequest request, HttpServletResponse response, Model model, MiaoshaUser user) {
@@ -66,6 +70,11 @@ public class GoodsController {
 		return html;
 	}
 
+
+	/**
+	 * 商品详情页
+	 *
+	 * */
 	@RequestMapping(value="/detail/{goodsId}")
 	@ResponseBody
 	public Result detail(MiaoshaUser user,

@@ -53,19 +53,6 @@ public class SampleController {
     }
 
 
-//    @RequestMapping("/redis/get")
-//    @ResponseBody
-//    public String getredis(){
-//        return redisService.get("ha",String.class);
-//    }
-//
-//    @RequestMapping("/redis/set")
-//    @ResponseBody
-//    public Result<Boolean> setredis(){
-//        Boolean res = redisService.set("ws","scy");
-//        return Result.success(res);
-//    }
-
     @RequestMapping("/redis/get")
     @ResponseBody
     public Result<User> redisGet() {

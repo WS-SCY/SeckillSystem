@@ -1,4 +1,5 @@
 package com.scyproject.config;
+import com.scyproject.access.UserContext;
 import com.scyproject.domain.MiaoshaUser;
 import com.scyproject.service.MiaoshaUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,15 +28,7 @@ public class UserArgumentResolver implements HandlerMethodArgumentResolver {
 
 	public Object resolveArgument(MethodParameter parameter, ModelAndViewContainer mavContainer,
 								  NativeWebRequest webRequest, WebDataBinderFactory binderFactory) throws Exception {
-		HttpServletRequest request = webRequest.getNativeRequest(HttpServletRequest.class );
-		HttpServletResponse response = webRequest.getNativeResponse(HttpServletResponse.class);
-		String paramToken = request.getParameter(MiaoshaUserService.COOKI_TOKEN_NAME);
-		String cookieToken = getCookieValue(request,MiaoshaUserService.COOKI_TOKEN_NAME);
-		if(StringUtils.isEmpty(cookieToken) && StringUtils.isEmpty(paramToken)){
-			return null;
-		}
-		String token = StringUtils.isEmpty(paramToken)?cookieToken:paramToken; //优先paramToken
-		return userService.getByToken(response,token);
+		return UserContext.getUser();
 	}
 
 	private String getCookieValue(HttpServletRequest request, String cookiTokenName) {

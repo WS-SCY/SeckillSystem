@@ -12,12 +12,10 @@ import com.scyproject.vo.GoodsVo;
 import com.scyproject.vo.OrderDetailVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.validation.constraints.NotNull;
 
 @Controller
 @RequestMapping("/order")
@@ -34,7 +32,11 @@ public class OrderController {
 	
 	@Autowired
 	GoodsService goodsService;
-	
+
+	/**
+	 * 查询订单详情页
+	 *
+	 * */
     @RequestMapping("/detail")
     @ResponseBody
     public Result<OrderDetailVo> info( MiaoshaUser user,

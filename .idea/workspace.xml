@@ -2,26 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96fb1532-d8e6-4636-93a9-402e1c28b9e5" name="Default Changelist" comment="分步式session">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/controller/OperatorController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/rabbitmq/MQConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/rabbitmq/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/rabbitmq/Receiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/rabbitmq/Sender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/redis/MiaoshaKey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/access/AccessInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/access/AccessLimit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/access/UserContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/redis/AccessKey.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seckillsystem.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/MainApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/config/UserArgumentResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/config/UserArgumentResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/controller/GoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/controller/GoodsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/controller/MiaoshaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/controller/MiaoshaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/controller/OperatorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/controller/OperatorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/controller/OrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/controller/SampleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/controller/SampleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/result/CodeMsg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/result/CodeMsg.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/service/MiaoshaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/service/MiaoshaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scyproject/service/MiaoshaUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scyproject/service/MiaoshaUserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/goods_detail.htm" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/goods_detail.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/goods_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/goods_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/scyproject/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/scyproject/AppTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/goods_detail.htm" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/goods_detail.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/goods_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/goods_list.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,19 +80,20 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/scyproject/access" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\resources\static" />
-      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\java\com\scyproject\controller" />
-      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\resources\templates" />
+      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\resources\mapper" />
       <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\java\com\scyproject\dao" />
+      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\resources\templates" />
       <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\java\com\scyproject\service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -102,12 +102,12 @@
       <recent name="com.scyproject.controller" />
       <recent name="com.scyproject.vo" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\学习资料\codes\mssAdmin-master\SeckillSystem\src\main\java\com\scyproject\access" />
       <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\resources\static" />
-      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\resources\mapper" />
-      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\java\com\scyproject\dao" />
+      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\java\com\scyproject\controller" />
       <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\resources\templates" />
-      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\java\com\scyproject\service" />
+      <recent name="C:\Users\Administrator\Desktop\mssAdmin-master\SeckillSystem\src\main\java\com\scyproject\dao" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -122,7 +122,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.MainApplication (1)">
+  <component name="RunManager" selected="Spring Boot.MainApplication">
     <configuration name="MD5Util" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.scyproject.util.MD5Util" />
       <module name="SeckillSystem" />
@@ -195,11 +195,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.MainApplication" />
         <item itemvalue="Spring Boot.MainApplication (1)" />
         <item itemvalue="JUnit.AppTest" />
         <item itemvalue="JUnit.AppTest.hi" />
         <item itemvalue="Application.MD5Util" />
-        <item itemvalue="Spring Boot.MainApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -249,6 +249,9 @@
       <workItem from="1627999224578" duration="12866000" />
       <workItem from="1628013508503" duration="11673000" />
       <workItem from="1628965729573" duration="308000" />
+      <workItem from="1629043056559" duration="738000" />
+      <workItem from="1629826622211" duration="139000" />
+      <workItem from="1629826795753" duration="28519000" />
     </task>
     <task id="LOCAL-00001" summary="封装redis">
       <created>1622180725400</created>
@@ -313,24 +316,29 @@
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/scyproject/controller/LoginController.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/scyproject/controller/GoodsController.java</url>
-          <line>48</line>
+          <line>52</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/scyproject/controller/MiaoshaController.java</url>
-          <line>62</line>
+          <line>92</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/scyproject/service/MiaoshaService.java</url>
-          <line>36</line>
+          <line>50</line>
           <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/scyproject/controller/MiaoshaController.java</url>
+          <line>143</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/scyproject/controller/MiaoshaController.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
